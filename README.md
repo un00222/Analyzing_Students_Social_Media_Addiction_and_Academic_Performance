@@ -8,17 +8,17 @@ A reproducible, end‑to‑end data science pipeline exploring how student socia
 ## Repository Structure 
 ```
 .
-├─ Students_Social_Media_Pipeline.ipynb   # End-to-end notebook (EDA → MRJob → Spark → Graph → Spatial)
-├─ data/
-│  └─ Students_Social_Media_Addiction.csv # Source dataset (kept locally; optionally ignored in Git)
-├─ src/
-│  ├─ mrjob_jobs/                         # MapReduce jobs
-│  ├─ spark_jobs/                         # Spark RDD/DataFrame/SQL scripts
-│  ├─ graph/                              # PageRank + triangle counting
-│  └─ spatial/                            # Sedona: hulls, buffers, overlaps
-├─ figures/                               # Generated plots/maps (ignored by default)
-├─ requirements.txt
-└─ README.md
+README.md
+requirements.txt
+docs/
+  Analysis.pdf
+notebooks/
+  Students_Social_Media_Pipeline.ipynb
+src/
+  Students_Social_Media_pipeline.py
+data/
+  Students Social Media Addiction.csv   (optional to track; see ignore)
+
 ```
 
 ## Environment Setup
