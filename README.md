@@ -20,9 +20,6 @@ A reproducible, end‑to‑end data science pipeline exploring how student socia
 ├─ requirements.txt
 └─ README.md
 ```
-> If your repo isn’t organized this way yet, you can create these folders as you convert cells from the notebook into scripts.
-
----
 
 ## Environment Setup
 
