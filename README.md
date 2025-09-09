@@ -94,9 +94,6 @@ python src/spatial/hulls_and_buffers.py --input "data/Students_Social_Media_Addi
 - Graph metrics: platform influence (PageRank), clustering (triangle counts)
 - Spatial coverage/overlap estimates for high‑risk vs global cohorts
 - Reproducible figures saved to `figures/`
-
-> Replace “addiction” with your dataset’s official field names; clarify scales (e.g., 0–10).
-
 ---
 
 ##  Reproducibility Tips
