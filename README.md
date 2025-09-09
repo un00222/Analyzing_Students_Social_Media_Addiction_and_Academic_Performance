@@ -127,6 +127,3 @@ Social Media vs Grades: Analyzing Students’ Social Media Addiction and Academi
 (Include your course/institution details if applicable.)
 
 ---
-
-## 📝 License
-Add your preferred license (MIT, CC‑BY, etc.).
