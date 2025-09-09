@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Notebooks & data (uncomment if you DON'T want them tracked)
+# *.ipynb
+# data/
+# *.csv
+# *.xlsx
+# *.png
+# *.jpg
