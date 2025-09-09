@@ -7,7 +7,6 @@ A reproducible, end‑to‑end data science pipeline exploring how student socia
 
 ## Repository Structure 
 ```
-.
 README.md
 requirements.txt
 docs/
