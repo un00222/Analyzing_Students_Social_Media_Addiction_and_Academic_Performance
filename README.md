@@ -4,7 +4,6 @@
 A small, reproducible data-science project exploring how student social-media use relates to sleep, mental health, conflicts, and academic performance. The repo contains one Jupyter notebook, one Python script, one CSV dataset, and a PDF analysis/report.
 
 > **Study type:** correlational (not causal).  
-> **Data care:** avoid sharing PII; publish only aggregated results.
 
 ---
 
