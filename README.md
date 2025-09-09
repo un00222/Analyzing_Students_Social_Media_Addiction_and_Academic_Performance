@@ -1,120 +1,80 @@
-# Social Media vs Grades
+# Social Media vs Grades  
 *Analyzing Students’ Social Media Addiction and Academic Performance*
 
-A reproducible, end‑to‑end data science pipeline exploring how student social‑media use relates to sleep, mental‑health, conflicts, and academic performance. The project demonstrates a full stack of techniques: **Pandas EDA**, **MRJob/MapReduce**, **Apache Spark (RDD/DataFrame/SQL)**, **graph analytics** (PageRank, triangle counting), and basic **spatial** modeling (Apache Sedona).
+A small, reproducible data-science project exploring how student social-media use relates to sleep, mental health, conflicts, and academic performance. The repo contains one Jupyter notebook, one Python script, one CSV dataset, and a PDF analysis/report.
+
+> **Study type:** correlational (not causal).  
+> **Data care:** avoid sharing PII; publish only aggregated results.
 
 ---
 
-## Repository Structure 
+## Repository Structure
 ```
 README.md
-requirements.txt
-docs/
-  Analysis.pdf
-notebooks/
-  Students_Social_Media_Pipeline.ipynb
-src/
-  Students_Social_Media_pipeline.py
-data/
-  Students Social Media Addiction.csv   (optional to track; see ignore)
-
+Students_Social_Media_Pipeline.ipynb
+Students_Social_Media_pipeline.py
+Students Social Media Addiction.csv
+Analyzing Students Social Media Addiction and Academic Performance.pdf
 ```
+
+---
 
 ## Environment Setup
 
-### Option A — Python virtual environment (recommended)
 ```bash
 python -m venv .venv
 
-# Windows
-.\.venv\Scripts\activate
+# Windows PowerShell
+.\.venv\Scripts\Activate.ps1
+# Windows CMD
+.\.venv\Scripts\activate.bat
 # macOS/Linux
 source .venv/bin/activate
 
 python -m pip install --upgrade pip
-pip install -r requirements.txt
 ```
 
-### Option B — Conda
+### Install the minimal libraries you need
 ```bash
-conda create -n social-grades python=3.11 -y
-conda activate social-grades
-pip install -r requirements.txt
+pip install pandas numpy matplotlib
 ```
-
-### Minimal `requirements.txt`
-If you don’t have one yet, start with:
-```
-pandas
-numpy
-matplotlib
-mrjob
-pyspark
-networkx
-apache-sedona
-geopandas
-shapely
-```
-> You can generate an exact list from your environment with `pip freeze > requirements.txt`.
+> Add others only if you use them:
+> - MapReduce: `pip install mrjob`
+> - Spark: `pip install pyspark`
+> - Graph: `pip install networkx`
+> - Spatial: `pip install apache-sedona geopandas shapely` (advanced)
 
 ---
 
-##  Quick Start
+## Quick Start
 
-### Run the Notebook
-Open **`Students_Social_Media_Pipeline.ipynb`** and execute cells top‑to‑bottom to:
-- Load & clean data, engineer features (e.g., risk buckets)
-- Compute platform usage summaries and correlations (MRJob/MapReduce)
-- Run Spark RDD/DataFrame/SQL analysis
-- Build a student–platform graph (PageRank, triangle counting)
-- Generate basic spatial analytics (hulls, buffers, overlaps) with Sedona
-- Output tables/figures into `figures/`
+### Run the notebook
+Open **`Students_Social_Media_Pipeline.ipynb`** and execute cells top-to-bottom.
 
-### (Optional) Run scripts from `src/`
+### Run the Python script
 ```bash
-# MRJob example
-python src/mrjob_jobs/platform_stats.py data/Students_Social_Media_Addiction.csv
-
-# Spark example
-python src/spark_jobs/df_queries.py --input "data/Students_Social_Media_Addiction.csv" --out "figures/"
-
-# Graph example (NetworkX or GraphFrames-based)
-python src/graph/run_pagerank.py --input "data/Students_Social_Media_Addiction.csv"
-
-# Spatial example (Sedona)
-python src/spatial/hulls_and_buffers.py --input "data/Students_Social_Media_Addiction.csv" --epsg 3857
+python Students_Social_Media_pipeline.py
 ```
 
 ---
 
 ## Typical Outputs
-- Per‑platform averages (usage hours, “addiction” score)
-- Relationships between usage, sleep, mental‑health, and conflicts
-- Graph metrics: platform influence (PageRank), clustering (triangle counts)
-- Spatial coverage/overlap estimates for high‑risk vs global cohorts
-- Reproducible figures saved to `figures/`
----
-
-##  Reproducibility Tips
-- Keep large CSVs in `data/` and add them to `.gitignore` (avoid storing raw PII in GitHub).
-- Pin versions with `requirements.txt` or `conda env export`.
-- Seed any random steps (`numpy.random.seed`, Spark `seed`) so charts/tables match your report.
+- Per-platform summaries (usage hours, “addiction” score)  
+- Relationships between usage, sleep, mental-health, conflicts  
+- Figures saved locally (if the notebook/script generates them)
 
 ---
 
-##  Limitations
-- Cross‑sectional, self‑reported data → **correlation, not causation**.
-- Platform averages may reflect sample composition.
-- Spatial areas are approximate for comparison, not precise geography.
+## Limitations
+- Cross-sectional, self-reported data → **correlation, not causation**.  
+- Platform averages may reflect sample composition.  
+- Any spatial numbers (if used) are approximate for comparison, not precise geography.
 
 ---
 
-##  Citation
-If you use this repo, please cite the project as:
+## Citation
+If you use this repo, please cite:
 ```
 Nguyen, U., & Medepalli, S. (2025).
 Social Media vs Grades: Analyzing Students’ Social Media Addiction and Academic Performance.
 ```
-(Include your course/institution details if applicable.)
-
----
