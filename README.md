@@ -3,8 +3,6 @@
 
 A reproducible, end‑to‑end data science pipeline exploring how student social‑media use relates to sleep, mental‑health, conflicts, and academic performance. The project demonstrates a full stack of techniques: **Pandas EDA**, **MRJob/MapReduce**, **Apache Spark (RDD/DataFrame/SQL)**, **graph analytics** (PageRank, triangle counting), and basic **spatial** modeling (Apache Sedona).
 
-> **Note**: This study is correlational, not causal. Handle student data ethically and avoid sharing personally identifiable information (PII).
-
 ---
 
 ## Repository Structure 
